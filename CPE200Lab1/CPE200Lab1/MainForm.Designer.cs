@@ -321,6 +321,7 @@
             this.MC.TabIndex = 21;
             this.MC.Text = "MC";
             this.MC.UseVisualStyleBackColor = true;
+            this.MC.Click += new System.EventHandler(this.MC_Click);
             // 
             // MR
             // 
@@ -331,6 +332,7 @@
             this.MR.TabIndex = 22;
             this.MR.Text = "MR";
             this.MR.UseVisualStyleBackColor = true;
+            this.MR.Click += new System.EventHandler(this.MR_Click);
             // 
             // MS
             // 
@@ -341,6 +343,7 @@
             this.MS.TabIndex = 23;
             this.MS.Text = "MS";
             this.MS.UseVisualStyleBackColor = true;
+            this.MS.Click += new System.EventHandler(this.MS_Click);
             // 
             // MPlus
             // 
@@ -351,6 +354,7 @@
             this.MPlus.TabIndex = 24;
             this.MPlus.Text = "M+";
             this.MPlus.UseVisualStyleBackColor = true;
+            this.MPlus.Click += new System.EventHandler(this.M_Click);
             // 
             // MMinus
             // 
@@ -361,6 +365,7 @@
             this.MMinus.TabIndex = 25;
             this.MMinus.Text = "M-";
             this.MMinus.UseVisualStyleBackColor = true;
+            this.MMinus.Click += new System.EventHandler(this.M_Click);
             // 
             // SquareRoot
             // 
