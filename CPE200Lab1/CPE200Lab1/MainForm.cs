@@ -99,7 +99,7 @@ namespace CPE200Lab1
 
                     // your code here
                     break;
-                
+
                     //case "M+":
             }
             isAllowBack = false;
@@ -223,7 +223,7 @@ namespace CPE200Lab1
         }
 
 
-        private void M_Click(object sender,EventArgs e)
+        private void M_Click(object sender, EventArgs e)
         {
             if (lblDisplay.Text is "Error")
             {
@@ -247,15 +247,15 @@ namespace CPE200Lab1
                     isAfterOperater = true;
                     Memory -= (Convert.ToDouble(firstOperand));
                     break;
-               
 
-                
+
+
             }
             isAllowBack = false;
         }
 
         private void MR_Click(object sender, EventArgs e)
-        {             
+        {
             lblDisplay.Text = Memory.ToString();
         }
 
