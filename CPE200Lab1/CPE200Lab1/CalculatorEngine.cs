@@ -14,9 +14,10 @@ namespace CPE200Lab1
             return Double.TryParse(str, out retNum);
         }
 
-        public  bool isOperator(string str)
+        public bool isOperator(string str)
         {
-            switch(str) {
+            switch (str)
+            {
                 case "+":
                 case "-":
                 case "X":
@@ -29,14 +30,14 @@ namespace CPE200Lab1
         public string Process(string str)
         {
             string[] parts = str.Split(' ');
-            if(!(isNumber(parts[0]) && isOperator(parts[1]) && isNumber(parts[2])))
+            if (!(isNumber(parts[0]) && isOperator(parts[1]) && isNumber(parts[2])))
             {
                 return "E";
-            } else
+            }
+            else
             {
                 return calculate(parts[1], parts[0], parts[2], 4);
             }
-
         }
         public string unaryCalculate(string operate, string operand, int maxOutputSize = 8)
         {
@@ -62,7 +63,7 @@ namespace CPE200Lab1
                         return result.ToString("G" + remainLength);
                     }
                 case "1/x":
-                    if(operand != "0")
+                    if (operand != "0")
                     {
                         double result;
                         string[] parts;

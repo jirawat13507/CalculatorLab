@@ -17,6 +17,7 @@ namespace CPE200Lab1
 
             for (int i = 0; i < parts.Length; i++)
             {
+                
                 if (isNumber(parts[i]))
                 {
                     myStack.Push(parts[i]);
@@ -29,17 +30,15 @@ namespace CPE200Lab1
                     myStack.Push(sum);
                 }
                 else return "E";
+                
             }
-
+            int x = myStack.Count;
             if (myStack.Count == 1)
-            {
+            {             
                 return myStack.Pop();
             }
             else return "E";
-
-
-            // your code here
-            
+            // your code here            
         }     
     }
 }
