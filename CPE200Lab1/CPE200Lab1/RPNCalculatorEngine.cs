@@ -17,10 +17,27 @@ namespace CPE200Lab1
 
             for (int i = 0; i < parts.Length; i++)
             {
-                
                 if (isNumber(parts[i]))
                 {
                     myStack.Push(parts[i]);
+                }
+                else if (parts[i] == "1/X" && myStack.Count == 1)
+                {
+                    first = myStack.Pop();                    
+                    sum = unaryCalculate(parts[i],first);
+                    myStack.Push(sum);
+                }
+                else if (parts[i] == "√" && myStack.Count == 1)
+                {
+                    first = myStack.Pop();
+                    sum = unaryCalculate(parts[i], first);
+                    myStack.Push(sum);
+                }
+                else if(parts[i] == "%" && myStack.Count == 1) 
+                {
+                    first = myStack.Pop();
+                    sum = calculate(parts[i], first,second ="0");
+                    myStack.Push(sum);
                 }
                 else if (isOperator(parts[i]) && myStack.Count >= 2)
                 {
@@ -29,10 +46,10 @@ namespace CPE200Lab1
                     sum = calculate(parts[i], first, second);
                     myStack.Push(sum);
                 }
-                else return "E";
-                
-            }
-            
+
+                else if(isOperator(parts[i]) && myStack.Count < 2)
+                    return "E";                                  
+            }       
             if (myStack.Count == 1)
             {             
                 return myStack.Pop();

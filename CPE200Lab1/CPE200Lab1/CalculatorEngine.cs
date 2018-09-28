@@ -22,6 +22,9 @@ namespace CPE200Lab1
                 case "-":
                 case "X":
                 case "÷":
+                case "%":
+                case "1/X":
+                case "√":
                     return true;
             }
             return false;
@@ -62,7 +65,7 @@ namespace CPE200Lab1
                         // trim the fractional part gracefully. =
                         return result.ToString("G" + remainLength);
                     }
-                case "1/x":
+                case "1/X":
                     if (operand != "0")
                     {
                         double result;
@@ -124,10 +127,11 @@ namespace CPE200Lab1
                         }
                         break;
                     case "%":
+                        return (Convert.ToDouble(firstOperand) / 100).ToString();
                         //your code here
                         break;
                 }
-            }catch
+            }catch(Exception ex)
             {
                 throw;
             }
