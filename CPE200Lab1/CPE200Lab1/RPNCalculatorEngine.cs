@@ -32,7 +32,7 @@ namespace CPE200Lab1
                 else return "E";
                 
             }
-            int x = myStack.Count;
+            
             if (myStack.Count == 1)
             {             
                 return myStack.Pop();
