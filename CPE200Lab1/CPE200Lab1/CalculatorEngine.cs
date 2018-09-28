@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 namespace CPE200Lab1
 {
     public class CalculatorEngine
-    {
+    {   
         public bool isNumber(string str)
         {
             double retNum;
@@ -94,8 +94,6 @@ namespace CPE200Lab1
         {
             try
             {
-
-
                 switch (operate)
                 {
                     case "+":
@@ -131,7 +129,7 @@ namespace CPE200Lab1
                         //your code here
                         break;
                 }
-            }catch(Exception ex)
+            }catch(OverflowException)
             {
                 throw;
             }
